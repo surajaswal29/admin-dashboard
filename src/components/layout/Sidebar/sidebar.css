@@ -1,0 +1,110 @@
+.dashboard-sidebar{
+    padding: 4px;
+}
+.dashboard-sidebar .dashboard-logo span{
+    font-size: 1.2rem;
+}
+.dashboard-logo svg{
+    height: 1.4rem;
+    width: 1.4rem;
+    color: var(--dashboard-color);
+}
+.dashboard-logo .dash-logo-color{
+    color: var(--dashboard-color);
+}
+.dashboard-sidebar-nav ul{
+    list-style-type: none;
+}
+.dashboard-sidebar-nav ul li{
+    width: 100%;
+    margin: 4px 0px;
+}
+
+.dashboard-sidebar-nav ul li a{
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+
+/* Light Theme CSS */
+.dashboard-sidebar-nav-light{
+    background: #fff;
+}
+.dashboard-sidebar-nav-light ul li a{
+    color: #424141;
+}
+
+.dashboard-sidebar-nav-light ul li a:hover{
+    background: #fefefe;
+    box-shadow: 2px 2px 15px hsla(0, 4%, 5%, 0.11);
+}
+
+.dashboard-sidebar-nav-light ul li a:hover > .dashboard-sidebar-nav ul li a span{
+    color: #000 !important;
+}
+
+.dashboard-sidebar-nav-light ul li a:hover > .dashboard-sidebar-nav ul li a svg{
+    color:var(--dashboard-color) !important;
+}
+
+/* Dark CSS theme */
+.dashboard-sidebar-nav-dark {
+    background: #000;
+}
+.dashboard-sidebar-nav-dark ul li a{
+    color: #a5a2a2;
+}
+.dashboard-sidebar-nav-dark ul li a:hover{
+    background: #232222;
+    box-shadow: 2px 2px 15px hsla(0, 1%, 18%, 0.11);
+}
+
+.dashboard-sidebar-nav-dark ul li a:hover > .dashboard-sidebar-nav ul li a span{
+    color: #cfcfcf !important;
+}
+
+.dashboard-sidebar-nav-dark ul li a:hover > .dashboard-sidebar-nav ul li a svg{
+    color:var(--dashboard-color) !important;
+}
+.ham-btn{
+    display: none;
+}
+
+@media (max-width:576px){
+    .dashboard-sidebar-nav{
+        display: none;
+        position: absolute;
+        right: -100%;
+    }
+    
+    .ham-btn{
+        display: block;
+    }
+    .ham-btn svg{
+        height: 1.3rem;
+        width: 1.3rem;;
+        color: darkmagenta;
+    }
+    .mobile-sidebar-nav{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+    .dashboard-bg-light .mobile-sidebar-nav{
+        border-bottom: 1px solid #f3f0f0;
+    }
+    .dashboard-bg-dark .mobile-sidebar-nav{
+        border-bottom: 1px solid #323232;
+    }
+    .dashboard-sidebar-nav-show{
+        display: block;
+        right: 0%;
+        top: 10%;
+        transition: all 0.5s;
+        z-index: 1000;
+        width: 60% !important;
+    }
+}

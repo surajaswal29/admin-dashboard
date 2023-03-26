@@ -1,0 +1,68 @@
+.user-panel{
+    cursor: pointer;
+}
+
+.user-avatar-box .user-img{
+    height: 35px;
+    width: 35px;
+}
+.user-panel svg{
+    height: 1.4rem;
+    width: 1.4rem;
+    color: #5d5e5e;
+}
+.user-img img{
+    height: 100%;
+    width: 100%;
+}
+.user-avatar-box span, .db-language span{
+    font-size: 16px;
+    color: #5d5e5e;
+}
+.dark--theme{
+    background:  #000 !important;
+}
+.icon-color-light svg{
+    color: #100e0e;
+}
+.icon-color-dark svg{
+    color: #efb618;
+}
+.db-language{
+    position: relative;
+    z-index: 100;
+}
+.lang-dropdown{
+    background: #fffcfc;
+    position: absolute;
+    display: none;
+    box-shadow: 4px 4px 20px #00000042;
+}
+.lang-dropdown-show{
+    display: block;
+    top: 106%;
+    transition: all 800ms;
+    
+}
+.lang-dropdown a{
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+.lang-dropdown a:hover{
+    background: #f1f1f1;
+}
+.show-only-mobile{
+    display: none;
+}
+@media (max-width:576px) {
+    .show-only-mobile{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #e6e4e4;
+    }
+    .top-grid-wrapper{
+        grid-template-columns: 1fr !important;
+        row-gap: 20px;
+    }
+}

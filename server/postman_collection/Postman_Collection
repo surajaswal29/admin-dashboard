@@ -1,0 +1,441 @@
+{
+	"info": {
+		"_postman_id": "7198b2c4-19c4-4483-8544-3cca71f8f571",
+		"name": "Assignment-1",
+		"description": "This API Contains CRUD Functionality.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26157365"
+	},
+	"item": [
+		{
+			"name": "Create Product&Category",
+			"item": [
+				{
+					"name": "(Test-2)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productName\":\"Demo Product1\",\r\n    \"qtyPerUnit\":11,\r\n    \"unitPrice\":21000,\r\n    \"unitInStock\":2000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/v1/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"create"
+							]
+						},
+						"description": "Insertion of product with no category is performed here."
+					},
+					"response": []
+				},
+				{
+					"name": "(Test-1)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productName\":\"Demo Product\",\r\n    \"qtyPerUnit\":10,\r\n    \"unitPrice\":20000,\r\n    \"unitInStock\":200,\r\n    \"categoryName\":\"Demo Category\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/v1/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"create"
+							]
+						},
+						"description": "Simple Insertion is performed here. all the basic information of product and category can be inserted and category ID in product model is refrenced with catgeory id in category model."
+					},
+					"response": []
+				},
+				{
+					"name": "(Test-3)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productName\":\"Demo Product2\",\r\n    \"qtyPerUnit\":10,\r\n    \"unitPrice\":20000,\r\n    \"unitInStock\":200,\r\n    \"discontinued\":\"yes\",\r\n    \"categoryName\":\"Demo Category2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/v1/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"create"
+							]
+						},
+						"description": "Insertion of product with _**'discontinued'**_ status ''yes\" is performed here.\n\nNote: the _**'discontinued'**_ field of product model is by default set to 'no'.\n\nEndFragment"
+					},
+					"response": []
+				},
+				{
+					"name": "(Create Live Demo)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productName\":\"Live Demo Product\",\r\n    \"qtyPerUnit\":10,\r\n    \"unitPrice\":20000,\r\n    \"unitInStock\":200,\r\n    \"categoryName\":\"Live Demo Category\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://assignment-6zyh.onrender.com/api/v1/create",
+							"protocol": "https",
+							"host": [
+								"assignment-6zyh",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Contains All the test cases regarding the insertion."
+		},
+		{
+			"name": "Get Product Details",
+			"item": [
+				{
+					"name": "Read One Product",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/v1/read/6402dc96fe130fc6c4fb3fb6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"read",
+								"6402dc96fe130fc6c4fb3fb6"
+							]
+						},
+						"description": "Product Details can be viewed by using path params i.e product ID"
+					},
+					"response": []
+				},
+				{
+					"name": "Read All Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/v1/readAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"readAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "(Read Live Product)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://assignment-6zyh.onrender.com/api/v1/read/6402dc96fe130fc6c4fb3fb6",
+							"protocol": "https",
+							"host": [
+								"assignment-6zyh",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"read",
+								"6402dc96fe130fc6c4fb3fb6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "(Read All Live Products)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://assignment-6zyh.onrender.com/api/v1/readall",
+							"protocol": "https",
+							"host": [
+								"assignment-6zyh",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"readall"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "(Read All Live Products)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "https://assignment-6zyh.onrender.com/api/v1/readall",
+									"protocol": "https",
+									"host": [
+										"assignment-6zyh",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"api",
+										"v1",
+										"readall"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 04 Mar 2023 06:21:47 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "7a28055bdf66e338-DEL"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"388-TSFJEmg6aFcmDzQwH04kx0e/Vwo\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400, h3-29=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"product\": [\n        {\n            \"_id\": \"6402dc96fe130fc6c4fb3fb6\",\n            \"productName\": \"Live Demo Product Updated 1\",\n            \"qtyPerUnit\": 100,\n            \"unitPrice\": 200,\n            \"unitInStock\": 20,\n            \"discontinued\": false,\n            \"categoryId\": \"6402dc96fe130fc6c4fb3fb4\",\n            \"createdAt\": \"2023-03-04T05:52:22.538Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6402dcadfe130fc6c4fb3fb8\",\n            \"productName\": \"Demo Product1\",\n            \"qtyPerUnit\": 11,\n            \"unitPrice\": 21000,\n            \"unitInStock\": 2000,\n            \"discontinued\": false,\n            \"createdAt\": \"2023-03-04T05:52:45.507Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6402dcb6fe130fc6c4fb3fbc\",\n            \"productName\": \"Demo Product2\",\n            \"qtyPerUnit\": 10,\n            \"unitPrice\": 20000,\n            \"unitInStock\": 200,\n            \"discontinued\": true,\n            \"categoryId\": \"6402dcb6fe130fc6c4fb3fba\",\n            \"createdAt\": \"2023-03-04T05:52:54.700Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6402e233aafdc55ae944761c\",\n            \"productName\": \"Live Demo Product\",\n            \"qtyPerUnit\": 10,\n            \"unitPrice\": 20000,\n            \"unitInStock\": 200,\n            \"discontinued\": false,\n            \"categoryId\": \"6402e233aafdc55ae944761a\",\n            \"createdAt\": \"2023-03-04T06:16:19.484Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Update Product",
+			"item": [
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productName\":\"Demo Product Updated 1\",\r\n    \"qtyPerUnit\":10,\r\n    \"unitPrice\":20000,\r\n    \"unitInStock\":200,\r\n    \"discontinued\":\"yes\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/v1/update/6402dc96fe130fc6c4fb3fb6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"update",
+								"6402dc96fe130fc6c4fb3fb6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "(Update Live Product)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productName\":\"Live Demo Product Updated 1\",\r\n    \"qtyPerUnit\":100,\r\n    \"unitPrice\":200,\r\n    \"unitInStock\":20,\r\n    \"discontinued\":\"no\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://assignment-6zyh.onrender.com/api/v1/update/6402dc96fe130fc6c4fb3fb6",
+							"protocol": "https",
+							"host": [
+								"assignment-6zyh",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"update",
+								"6402dc96fe130fc6c4fb3fb6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Delete Product",
+			"item": [
+				{
+					"name": "Delete Product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4000/api/v1/delete/6402dd12fe130fc6c4fb3fc5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"v1",
+								"delete",
+								"6402dd12fe130fc6c4fb3fc5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "(Delete Live Product)",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://assignment-6zyh.onrender.com/api/v1/delete/6402dcadfe130fc6c4fb3fb8",
+							"protocol": "https",
+							"host": [
+								"assignment-6zyh",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"delete",
+								"6402dcadfe130fc6c4fb3fb8"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
