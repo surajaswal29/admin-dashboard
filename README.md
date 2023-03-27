@@ -19,8 +19,6 @@ Dashboard Demo URL : https://mern-dashboard-buke.onrender.com
 
 ![MERN Dashboard Demo](./MernDashboard_Demo.gif)
 
-![Dashboard](https://user-images.githubusercontent.com/87890258/227876703-49fa0591-d651-46ee-bf35-9a807ce15912.png)
 
-<h3>Google Map and Geocoding API Inetgration</h3>
 
-![My-MERN-Dashboard-Created-by-Suraj-Aswal_](https://user-images.githubusercontent.com/87890258/227878503-ec02cde0-8374-4353-983d-bf08adefdcb7.png)
+
