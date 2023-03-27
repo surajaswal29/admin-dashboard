@@ -3,6 +3,7 @@ import axios from 'axios';
 
 import UserIcon from "../../../images/user-icon.png";
 import MapBox from './MapBox';
+import { MAIN_URI } from '../../helper';
 
 const EmployeeModal = ({refHandle, dataId}) => {
 
@@ -19,7 +20,7 @@ const EmployeeModal = ({refHandle, dataId}) => {
     useEffect(() => {
       // calling get single user API
       const loadData = async ()=>{
-        const {data} = await axios.get(`/api/v1/read/${dataId}`);
+        const {data} = await axios.get(`${MAIN_URI}/api/v1/read/${dataId}`);
         // console.log(data);
         setEmpData(data.employee);
       }

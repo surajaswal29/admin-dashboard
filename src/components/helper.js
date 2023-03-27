@@ -1,0 +1,1 @@
+export const MAIN_URI = "https://mern-dashboard-blpx.onrender.com";

@@ -12,6 +12,7 @@ import TableBox from './TableBox';
 // import CompanyData from "../../../Data/data.json";
 import axios from "axios";
 import Loader from "react-js-loader";
+import {MAIN_URI} from "../../helper";
 
 
 // Style file
@@ -23,7 +24,7 @@ const Home = ({themeColor}) => {
 const [CompanyData, setCompanyData] = useState();
 
  const getData = async ()=>{
-    const {data} = await axios.get('/api/v1/readAll');
+    const {data} = await axios.get(`${MAIN_URI}/api/v1/readAll`);
     setCompanyData(data.employee);
     // console.log(data);
  }
