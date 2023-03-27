@@ -14,4 +14,6 @@ Dashboard Demo URL : https://mern-dashboard-buke.onrender.com
         <li>Google map and Geocoding API Integration</li>
          <li>Data Table, clicking on each table row shows the data in a popup with a map pointing the location. </li>
 </ul>
-[Dashboard.webm](https://user-images.githubusercontent.com/87890258/227873301-d5628731-0236-4300-806c-79c8cf8b2e05.webm)
+
+<h3>Sneak Peek</h3>
+![Dashboard](https://user-images.githubusercontent.com/87890258/227876703-49fa0591-d651-46ee-bf35-9a807ce15912.png)
