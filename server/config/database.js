@@ -2,6 +2,9 @@ const mongoose = require('mongoose');
 
 // opening connection to mongo DB
 const connectDB = ()=>{
+
+    mongoose.set('strictQuery',false);
+
     mongoose.connect(process.env.DB_URL,{
         dbName:"employee_dashboard",
         useNewUrlParser: true,
