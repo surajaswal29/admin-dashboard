@@ -1,1 +1,2 @@
-export const MAIN_URI = "https://mern-dashboard-blpx.onrender.com";
+// export const MAIN_URI = "https://mern-dashboard-blpx.onrender.com";
+export const MAIN_URI = window.location.hostname === "localhost" ? "http://localhost:4000":"https://mern-dashboard-blpx.onrender.com";

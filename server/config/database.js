@@ -6,7 +6,7 @@ const connectDB = ()=>{
     mongoose.set('strictQuery',false);
 
     mongoose.connect(process.env.DB_URL,{
-        dbName:"employee_dashboard",
+        dbName:"employee-dash",
         useNewUrlParser: true,
         useUnifiedTopology: true,
     }).then((data)=>{
