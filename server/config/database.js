@@ -9,6 +9,8 @@ const connectDB = ()=>{
         dbName:"employee-dash",
         useNewUrlParser: true,
         useUnifiedTopology: true,
+        maxPoolSize:20,
+        minPoolSize:5
     }).then((data)=>{
         console.log(`Mongo DB is connected successfully with ${data.connection.host}`);
     }).catch((error)=>{
